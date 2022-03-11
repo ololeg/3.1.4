@@ -150,7 +150,7 @@
                                                                     <br />
 
                                                                     <select multiple class="form-control w-100"
-                                                                            id="editRoles" name="checked">
+                                                                            id="editRoles" required name="checked">
                                                                         <option
                                                                                 th:each="role : ${roleList}"
                                                                                 th:value="${role.getId()}"
@@ -315,7 +315,8 @@
                                     <div class="form-group row justify-content-center align-items-center">
                                         <div class="col-sm-3">
                                             <label for="roles">Select roles: </label>
-                                            <select multiple class="form-control w-100" id="roles" name="checked">
+                                            <select multiple class="form-control w-100" id="roles"
+                                                    required name="checked">
                                                 <option
                                                         th:each="role : ${roleList}"
                                                         th:text="${role.getRole()}"
